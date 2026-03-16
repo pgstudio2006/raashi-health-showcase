@@ -7,9 +7,10 @@ import { toast } from "sonner";
 
 const Confirmation = () => {
   const { state } = useLocation();
-  if (!state?.bookingId) return <Navigate to="/" />;
+  const bookingId = state?.bookingId;
+  const videoLink = bookingId ? `https://meet.jit.si/raashi-${bookingId.toLowerCase()}` : "";
 
-  const videoLink = `https://meet.jit.si/raashi-${state.bookingId.toLowerCase()}`;
+  if (!bookingId) return <Navigate to="/" />;
 
   const copyLink = () => {
     navigator.clipboard.writeText(videoLink);
