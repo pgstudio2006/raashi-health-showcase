@@ -49,7 +49,7 @@ const Index = () => {
               <span className="live-dot" />
               <span className="text-sm font-medium text-green-400">Live Consultation Desk</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/20 border border-gold/30 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/30 mb-6">
               <Award className="h-4 w-4 text-gold" />
               <span className="text-gold font-semibold text-sm tracking-wide">#1 Rated Hospital in Surat</span>
             </div>
