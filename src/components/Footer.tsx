@@ -9,9 +9,10 @@ const Footer = () => (
             <Stethoscope className="h-6 w-6 text-gold" />
             <span className="font-heading text-xl font-bold">Raashi Hospital</span>
           </div>
-          <p className="text-sm opacity-70">
-            Trusted since 2003 — delivering world-class orthopaedic, maternity, and paediatric care to Surat and beyond.
+          <p className="text-sm opacity-70 mb-3">
+            Surat's most trusted hospital since 2003 — delivering world-class orthopaedic, maternity, and paediatric care across South Gujarat.
           </p>
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-gold">🏆 #1 Rated in Surat</span>
         </div>
         <div>
           <h4 className="font-heading text-lg font-semibold mb-4">Contact</h4>

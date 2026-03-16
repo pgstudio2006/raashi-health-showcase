@@ -183,12 +183,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trust Banner */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <MapPin className="h-5 w-5 text-primary" />
+            <span className="font-heading text-lg font-semibold text-foreground">Proudly Serving Surat Since 2003</span>
+          </div>
+          <p className="text-muted-foreground text-sm max-w-xl mx-auto">Recognized as one of Gujarat's finest multispecialty hospitals — trusted by over 50,000 families across South Gujarat.</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4">
           <ShieldCheck className="h-12 w-12 mx-auto mb-4 text-gold" />
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">Ready to Consult?</h2>
-          <p className="opacity-80 mb-8 max-w-lg mx-auto">Book a video consultation with our specialists from the comfort of your home.</p>
+          <p className="opacity-80 mb-8 max-w-lg mx-auto">Book a video consultation with Surat's top specialists from the comfort of your home.</p>
           <Link to="/doctors">
             <Button size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90 text-base px-10">
               <CalendarCheck className="mr-2 h-5 w-5" /> Book Now
