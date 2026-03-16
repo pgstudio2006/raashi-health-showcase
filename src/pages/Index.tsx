@@ -49,12 +49,16 @@ const Index = () => {
               <span className="live-dot" />
               <span className="text-sm font-medium text-green-400">Live Consultation Desk</span>
             </div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/20 border border-gold/30 mb-6">
+              <Award className="h-4 w-4 text-gold" />
+              <span className="text-gold font-semibold text-sm tracking-wide">#1 Rated Hospital in Surat</span>
+            </div>
             <h1 className="font-heading text-5xl md:text-7xl font-bold text-background leading-tight mb-6">
               Where Healing<br />
               <span className="text-gold">Meets Heart</span>
             </h1>
             <p className="text-background/80 text-lg mb-8 max-w-lg">
-              Trusted since 2003 in Surat — offering world-class orthopaedic, maternity & paediatric care with cutting-edge telemedicine.
+              Surat's most trusted hospital since 2003 — delivering world-class orthopaedic, maternity & paediatric care with cutting-edge telemedicine.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/doctors">
