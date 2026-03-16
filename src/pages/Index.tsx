@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { CalendarCheck, Stethoscope, Baby, Bone, Heart, Users, Award, Clock, ShieldCheck, Wifi } from "lucide-react";
+import { CalendarCheck, Stethoscope, Baby, Bone, Heart, Users, Award, Clock, ShieldCheck, Wifi, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { doctors } from "@/lib/data";
 import heroImg from "@/assets/hospital-hero.jpg";
