@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { CalendarCheck, Stethoscope, Baby, Bone, Heart, Users, Award, Clock, ShieldCheck, Wifi } from "lucide-react";
+import { CalendarCheck, Stethoscope, Baby, Bone, Heart, Users, Award, Clock, ShieldCheck, Wifi, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { doctors } from "@/lib/data";
 import heroImg from "@/assets/hospital-hero.jpg";
@@ -49,12 +49,16 @@ const Index = () => {
               <span className="live-dot" />
               <span className="text-sm font-medium text-green-400">Live Consultation Desk</span>
             </div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/20 border border-secondary/30 mb-6">
+              <Award className="h-4 w-4 text-gold" />
+              <span className="text-gold font-semibold text-sm tracking-wide">#1 Rated Hospital in Surat</span>
+            </div>
             <h1 className="font-heading text-5xl md:text-7xl font-bold text-background leading-tight mb-6">
               Where Healing<br />
               <span className="text-gold">Meets Heart</span>
             </h1>
             <p className="text-background/80 text-lg mb-8 max-w-lg">
-              Trusted since 2003 in Surat — offering world-class orthopaedic, maternity & paediatric care with cutting-edge telemedicine.
+              Surat's most trusted hospital since 2003 — delivering world-class orthopaedic, maternity & paediatric care with cutting-edge telemedicine.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/doctors">
@@ -179,12 +183,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trust Banner */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <MapPin className="h-5 w-5 text-primary" />
+            <span className="font-heading text-lg font-semibold text-foreground">Proudly Serving Surat Since 2003</span>
+          </div>
+          <p className="text-muted-foreground text-sm max-w-xl mx-auto">Recognized as one of Gujarat's finest multispecialty hospitals — trusted by over 50,000 families across South Gujarat.</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4">
           <ShieldCheck className="h-12 w-12 mx-auto mb-4 text-gold" />
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">Ready to Consult?</h2>
-          <p className="opacity-80 mb-8 max-w-lg mx-auto">Book a video consultation with our specialists from the comfort of your home.</p>
+          <p className="opacity-80 mb-8 max-w-lg mx-auto">Book a video consultation with Surat's top specialists from the comfort of your home.</p>
           <Link to="/doctors">
             <Button size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90 text-base px-10">
               <CalendarCheck className="mr-2 h-5 w-5" /> Book Now

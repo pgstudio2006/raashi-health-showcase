@@ -17,11 +17,25 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 frost-panel border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <Stethoscope className="h-7 w-7 text-primary" />
-          <span className="font-heading text-xl font-bold text-foreground tracking-tight">
-            Raashi Hospital
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <motion.div
+            whileHover={{ rotate: [0, -10, 10, -5, 0], scale: 1.1 }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:blur-lg transition-all" />
+            <div className="relative bg-gradient-to-br from-primary to-teal-glow p-1.5 rounded-xl">
+              <Stethoscope className="h-5 w-5 text-primary-foreground" />
+            </div>
+          </motion.div>
+          <div className="flex flex-col leading-none">
+            <span className="font-heading text-lg font-bold text-foreground tracking-tight">
+              Raashi Hospital
+            </span>
+            <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-gold">
+              Surat's Finest
+            </span>
+          </div>
         </Link>
         <div className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
