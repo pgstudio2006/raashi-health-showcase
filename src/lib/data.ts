@@ -114,6 +114,59 @@ export const savePrescription = (rx: Prescription) => {
   localStorage.setItem("raashi_prescriptions", JSON.stringify(prescriptions));
 };
 
+export const getDemoPrescriptions = (patientPhone: string): Prescription[] => {
+  const normalizedPhone = patientPhone.replace(/\D/g, "").slice(0, 10) || "9999999999";
+  const phoneSuffix = normalizedPhone.slice(-4);
+
+  return [
+    {
+      id: `DEMO-RX-${phoneSuffix}-1`,
+      bookingId: `DEMO-BOOK-${phoneSuffix}-1`,
+      doctorId: "dr-piyush",
+      patientName: "Demo Patient",
+      patientAge: 34,
+      patientPhone: normalizedPhone,
+      medicines: [
+        { name: "Calcium + Vitamin D3", dosage: "1 tablet after breakfast", duration: "30 days" },
+        { name: "Pain Relief Gel", dosage: "Apply twice daily", duration: "10 days" },
+      ],
+      notes: "Demo prescription for showcase purposes. Avoid strain and continue light movement.",
+      createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    },
+    {
+      id: `DEMO-RX-${phoneSuffix}-2`,
+      bookingId: `DEMO-BOOK-${phoneSuffix}-2`,
+      doctorId: "dr-amrit",
+      patientName: "Demo Patient",
+      patientAge: 8,
+      patientPhone: normalizedPhone,
+      medicines: [
+        { name: "Paracetamol Syrup", dosage: "5 ml after food", duration: "3 days" },
+        { name: "ORS", dosage: "Small sips through the day", duration: "2 days" },
+      ],
+      notes: "Demo pediatric prescription. Monitor temperature and maintain hydration.",
+      createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+    },
+  ];
+};
+
+export const findPrescriptionsByPhone = (patientPhone: string) => {
+  const normalizedPhone = patientPhone.replace(/\D/g, "").slice(0, 10);
+  const matches = getPrescriptions().filter((p) => p.patientPhone === normalizedPhone);
+
+  if (matches.length > 0) {
+    return {
+      prescriptions: matches,
+      isDemo: false,
+    };
+  }
+
+  return {
+    prescriptions: getDemoPrescriptions(normalizedPhone),
+    isDemo: true,
+  };
+};
+
 export const generateBookingId = () => {
   return "RAASHI-" + Math.random().toString(36).substring(2, 8).toUpperCase();
 };
